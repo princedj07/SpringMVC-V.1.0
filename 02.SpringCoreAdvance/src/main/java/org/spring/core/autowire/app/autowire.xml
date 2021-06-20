@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-2.5.xsd
+http://www.springframework.org/schema/util 
+http://www.springframework.org/schema/util/spring-util-2.0.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<context:annotation-config />
+
+	<!-- <bean id="deptObject" class="org.spring.core.autowire.app.HRDepartment" /> -->
+
+	<!-- 1st way <bean id="company" class="org.spring.core.autowire.app.Company"> 
+		<constructor-arg name="dept" ref="deptObject"/> </bean> -->
+
+	<!-- <bean id="company" class="org.spring.core.autowire.app.Company" autowire="constructor"/> -->
+	<!--<bean id="company" class="org.spring.core.autowire.app.Company" autowire="byName" /> -->
+	<!-- <bean id="company" class="org.spring.core.autowire.app.Company" autowire="byType" /> -->	
+
+	<bean id="dept1" class="org.spring.core.autowire.app.HRDepartment" />
+	<bean id="dept2" class="org.spring.core.autowire.app.HRDepartment" />
+	<bean id="company" class="org.spring.core.autowire.app.Company" />		
+
+</beans>
